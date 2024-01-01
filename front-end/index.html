@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="progress">
+        <div class="progressBarArea">
+            <p>正在加载渲染效果，请等待</p>
+            <div class="progressBar"></div>
+        </div>
+    </div>
+
+    <img src="" alt="">
+    <div class="mask">
+        <div class="operateArea">
+            <div class="fontArea">
+                <div class="titleFont">上传视频</div>
+                <div class="x" onclick="closePage()">×</div>
+            </div>
+            <div class="uploadVedio" onclick="uploadVedio()">
+                <img src="icon/添加-方-L.png">
+            </div>
+            <div class="none"></div>
+        </div>
+    </div>
+    <div class="mask1">
+        <div class="operateArea">
+            <div class="fontArea">
+                <div class="titleFont">上传图片</div>
+                <div class="x" onclick="closePage1()">×</div>
+            </div>
+            <div class="uploadVedio" onclick="uploadImg()">
+                <img src="icon/添加-方-L.png">
+            </div>
+        </div>
+    </div>
+    <div class="mask2">
+        <div class="operateArea">
+            <div class="fontArea">
+                <div class="titleFont">上传蒙版</div>
+                <div class="x" onclick="closePage2()">×</div>
+            </div>
+            <div class="uploadVedio" onclick="uploadMaskImg()">
+                <img src="icon/添加-方-L.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="topBar">
+            <div class="logoContent">
+                <img src="./icon/-_模型训练.png">
+                <div class="logo">Vedio To 3D</div>
+            </div>
+            <div class="none"></div>
+            <div class="useArea">
+                <div onclick="addTrainSession()" style="cursor: pointer;">
+                    <img src="./icon/加.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="showArea" id="showSection1">
+                <div class="areaTitleOfBackground">
+                    <div class="sesionInfo">我的视频 1</div>
+                    <select class="dropdownSelect" id="dropdown1" onclick="onClickDropDown(1)">
+                        <option hidden disabled selected value>select an option</option>
+                    </select> <!--下拉菜单 -->
+                    <div class="spacer"></div> <!-- 用来占位 把下拉菜单 往前推 -->
+                    <div class="uploadInfo">
+                        <div class="uploadImg" onclick="onRetrain(1)" style="background-color:#8B0000;color:antiquewhite">
+                                                                     重新训练</div>
+                        <div class="uploadImg" onclick="wordToImg(1)">获取结果</div> <!-- wrdToImg() -->
+                    </div>
+                </div>
+                <div class="vedioContain">
+                    <div class="vedio" id="vedio1">
+                        <div class="uploadVedio" onclick="uploadVedio(1)"> <!-- uploadVideo() -->
+                            <img src="icon/添加-方-L.png">
+                            <p>上传视频</p>
+                        </div>
+                    </div>
+                    <div style="margin: 0 20px 0 20px;"><img src="./icon/加.png"></div>
+                    <div class="img" id="img1">
+                        <div class="uploadVedio" onclick="uploadImg(1)">
+                            <img src="icon/添加-方-L.png">
+                            <p>上传图片</p>
+                        </div>
+                    </div>
+                    <div style="margin: 0 20px 0 20px;"><img src="./icon/加.png"></div>
+                    <div class="maskImg" id="maskImg1">
+                        <div class="uploadVedio" onclick="uploadMaskImg(1)">
+                            <img src="icon/添加-方-L.png">
+                            <p>上传蒙版</p>
+                        </div>
+                    </div>
+                    <div><img src="./icon/等于.png"></div>
+                    <div class="getImg" id="getResult1"></div> <!-- 结果图片 4宫格 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="file" id="uploadVedio" style="display: none;">
+    <input type="file" id="uploadBgi" style="display: none;">
+    <input type="file" id="uploadMask" style="display: none;">
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+</body>
+<script src="./jQuery/jquery.js"></script>
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</html>

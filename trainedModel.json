@@ -1,0 +1,14 @@
+[
+    {
+        "name": "caption",
+        "prompt": "lkc,a woman in a black dress standing in front of a black background<lora:caption:1>"
+    },
+    {
+        "name": "bucket",
+        "prompt": "ypo,a pink basket on the floor in an office<lora:bucket:1>"
+    },
+    {
+        "name": "box",
+        "prompt": "xyw,a box sitting on the floor in an office<lora:box:1>"
+    }
+]
