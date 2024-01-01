@@ -52,3 +52,13 @@ Edit `train.sh`, and run it.
 Run `tensorboard.ps1` will start TensorBoard at http://localhost:6006/
 
 ![](./assets/tensorboard-example.png)
+
+There are few up changes that has been made on this LoRA scripts
+
+### Train via video
+To train our lora model using video as input:
+
+1. `pip install -r requirement.txt`
+2. Run `merge.py`
+
+
